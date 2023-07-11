@@ -1,0 +1,19 @@
+.btn{
+    display: block;
+    position: relative;
+    margin: 0rem auto 0 auto;
+    padding: .2rem 0;
+    font-size: 1rem;
+    color: #eee;
+    border: 0;
+    background-color: black;
+    transition: 0.9s;
+}
+
+.btn p {
+    color: white;
+}
+
+.btn :hover{
+    color: #ffbb33;
+}

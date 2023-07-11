@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Company from './components/pages/Company';
 import Contact from './components/pages/Contact';
@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/newproject" element={<NewProject/>} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
 )}
 
