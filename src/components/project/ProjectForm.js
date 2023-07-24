@@ -26,13 +26,12 @@ function ProjectForm({btnText, handleSubmit, projectData}){
 
     const submit = (e) => {
         e.preventDefault()
-        //handleSubmit(project)
-        console.log(project);
+        handleSubmit(project)
     }
 
     function handleChange(e){
         setProject({ ...project, [e.target.name]: e.target.value})
-        console.log(project);
+
     }
 
     function handleCategory(e){

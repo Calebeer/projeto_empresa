@@ -35,7 +35,7 @@ function Navbar(){
              <Link className='link active ' to="/" > Home </Link>
                </li>
              <li>
-             <Link className='link' to="/newproject" >Projetos</Link>
+             <Link className='link' to="/project" >Projetos</Link>
                </li>
                <li> 
              <Link className='link' to="/company" >Empresa</Link>
