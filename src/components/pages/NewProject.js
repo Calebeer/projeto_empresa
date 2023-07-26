@@ -18,6 +18,7 @@ function NewProject(){
         headers:{
             'Content-type': 'application/json',
         },
+        //Aqui eu uso o Json.stringfy para encaminhar as informações para o project
         body:JSON.stringify(project)
     })
     .then((resp) => resp.json())

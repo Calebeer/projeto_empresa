@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 function ProjectForm({btnText, handleSubmit, projectData}){
 
     const[ categories, setCategories] = useState([])
-    const [project, setProject] = useState(projectData || {})
+    const [ project, setProject ] = useState(projectData || {})
 
     useEffect(() => {
         fetch("http://localhost:5000/categories", {
@@ -30,8 +30,7 @@ function ProjectForm({btnText, handleSubmit, projectData}){
     }
 
     function handleChange(e){
-        setProject({ ...project, [e.target.name]: e.target.value})
-
+            setProject({...project, [e.target.name]:e.target.value})
     }
 
     function handleCategory(e){
