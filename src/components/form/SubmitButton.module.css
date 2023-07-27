@@ -8,6 +8,7 @@
     border: 0;
     background-color: black;
     transition: 0.9s;
+    cursor: pointer;
 }
 
 .btn p {
