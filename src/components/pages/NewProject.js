@@ -24,7 +24,7 @@ function NewProject(){
     .then((resp) => resp.json())
     .then((data) =>{
         console.log(data);
-        navigate('/project', {state: {message:'Sucesso.', calebe: true, array: [123, 34]}})
+        navigate('/project', {state: {message:'Sucesso.'}})
     })
     .catch((err)=> console.log(err))
 
