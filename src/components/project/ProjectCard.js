@@ -1,5 +1,9 @@
+import LinkButton from '../layout/LinkButton';
 import styles from './ProjectCard.module.css'
-import {BsPencil, BsFillTrashFill} from 'react-icons'
+import {AiFillEdit } from 'react-icons/ai';
+import { CgTrash } from 'react-icons/cg'
+import { Link } from 'react-router-dom'
+
 
 
 function ProjectCard({id, name, budget, category, handleRemove}){ 
@@ -14,8 +18,13 @@ function ProjectCard({id, name, budget, category, handleRemove}){
             </p>
 
             <div className={styles.project_card_actions} >
-                <p>Editar</p>
-                <p>Remover</p>
+            {/* <LinkButton to="/"  text={ <AiFillEdit/>  }  /> */}
+            <Link to={"/"}>
+                <AiFillEdit/> editar
+            </Link>
+                <button>
+                    <CgTrash/> excluir
+                </button>
             </div>
         </div>
     )

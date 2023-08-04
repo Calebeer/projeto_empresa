@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import Message from "../layout/Message";
 import styles from './Project.module.css'
 import Container from '../layout/Container'
+import Loading  from "../layout/Loading";
 import LinkButton from '../layout/LinkButton'
 import ProjectCard from "../project/ProjectCard";
 import { useState, useEffect } from "react";
@@ -9,7 +10,7 @@ import { useState, useEffect } from "react";
 function Project(){
 
     const[projects, setProjects] = useState([])
-
+    const[removeLoading, setRemoveLoading] = useState(false)
     
     const location = useLocation()
     let message = ''
@@ -29,6 +30,7 @@ function Project(){
         .then(data => {
             console.log(data)
             setProjects(data)
+            setRemoveLoading(true)
         })
         .catch((err) => console.log(err))
     },[])
