@@ -40,6 +40,7 @@ function Project(){
             <div className={styles.title_container} >
                 <h1>Meus Projetos</h1>
                 <LinkButton to={'/newproject'} text={'Novo projeto'} />
+
             </div>
         {message &&  <Message type={'success'} msg={message}/>}
         <Container customClass="start">
@@ -53,6 +54,7 @@ function Project(){
                 key={project.id}
                   />
             ))}
+            {!removeLoading && <Loading/>}
         </Container>
         </div>
             
