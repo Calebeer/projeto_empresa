@@ -11,6 +11,7 @@ function ProjectCard({id, name, budget, category, handleRemove}){
     const remove = (e)=>{
         e.preventDefault()
         handleRemove(id)
+        console.log('asdsa');
     }   
 
 
@@ -30,7 +31,7 @@ function ProjectCard({id, name, budget, category, handleRemove}){
             <Link to={"/"}>
                 <AiFillEdit/> editar
             </Link>
-                <button oneClick={remove}  >
+                <button onClick={remove}  >
                     <CgTrash/> excluir
                 </button>
             </div>

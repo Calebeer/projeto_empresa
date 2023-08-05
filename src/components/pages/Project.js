@@ -49,7 +49,6 @@ function Project(){
         })
         .catch(err => console.log(err ))
         }
-
         
 
     return(
@@ -70,11 +69,11 @@ function Project(){
                 category={project?.category?.name}
                 key={project.id}
                 handleRemove={removeProject}
-
                   />
             ))}
             {!removeLoading && <Loading/>}
             {removeLoading && projects.length === 0 && <NotProject/> }
+
         </Container>
         </div>
             

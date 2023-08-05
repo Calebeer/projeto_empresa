@@ -1,26 +1,15 @@
 {
   "projects": [
     {
-      "name": "aasa",
-      "budget": "121",
+      "name": "Escola",
+      "budget": "12000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
       "id": 1
-    },
-    {
-      "name": "3211",
-      "budget": "12312",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
     }
   ],
   "categories": [
