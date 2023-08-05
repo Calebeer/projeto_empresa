@@ -6,6 +6,8 @@ import Loading  from "../layout/Loading";
 import LinkButton from '../layout/LinkButton'
 import ProjectCard from "../project/ProjectCard";
 import { useState, useEffect } from "react";
+import NotProject from '../layout/NotProject'
+
 
 function Project(){
 
@@ -35,6 +37,21 @@ function Project(){
         .catch((err) => console.log(err))
     },[])
 
+    function removeProject(id){
+        fetch(`http://localhost:5000/projects/${id}`,{
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json'
+            },
+        }).then(resp => resp.json )
+        .then(data => {
+            setProjects(projects.filter((project) => project.id !== id))
+        })
+        .catch(err => console.log(err ))
+        }
+
+        
+
     return(
         <div className={styles.project_container} >
             <div className={styles.title_container} >
@@ -52,9 +69,12 @@ function Project(){
                 budget={project.budget}
                 category={project?.category?.name}
                 key={project.id}
+                handleRemove={removeProject}
+
                   />
             ))}
             {!removeLoading && <Loading/>}
+            {removeLoading && projects.length === 0 && <NotProject/> }
         </Container>
         </div>
             
