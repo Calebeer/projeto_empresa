@@ -28,7 +28,7 @@ function ProjectCard({id, name, budget, category, handleRemove}){
 
             <div className={styles.project_card_actions} >
             {/* <LinkButton to="/"  text={ <AiFillEdit/>  }  /> */}
-            <Link to={"/"}>
+            <Link to={`/project/${id}`}>
                 <AiFillEdit/> editar
             </Link>
                 <button onClick={remove}  >

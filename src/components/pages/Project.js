@@ -13,6 +13,7 @@ function Project(){
 
     const[projects, setProjects] = useState([])
     const[removeLoading, setRemoveLoading] = useState(false)
+    const [projectMessage, setProjectMessage] = useState('')
     
     const location = useLocation()
     let message = ''
@@ -46,6 +47,7 @@ function Project(){
         }).then(resp => resp.json )
         .then(data => {
             setProjects(projects.filter((project) => project.id !== id))
+            setProjectMessage('Projeto removido com sucesso')
         })
         .catch(err => console.log(err ))
         }
@@ -58,6 +60,7 @@ function Project(){
                 <LinkButton to={'/newproject'} text={'Novo projeto'} />
 
             </div>
+        {projectMessage && <Message type={'success'} msg={projectMessage} />}
         {message &&  <Message type={'success'} msg={message}/>}
         <Container customClass="start">
             {projects.length > 0 &&
