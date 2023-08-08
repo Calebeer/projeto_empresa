@@ -1,6 +1,7 @@
 import styles from './Projects.module.css';
 import { useParams } from 'react-router-dom';
 import {useState, useEffect} from 'react'
+import Loading from '../layout/Loading';
 
 
 function Projects(){
@@ -16,7 +17,7 @@ function Projects(){
                 'Content-type': 'application/json'
             },
         })
-        .then(resp => resp.json)
+        .then(resp => resp.json())
         .then((data) =>{
             setProject(data)
         })
@@ -24,9 +25,13 @@ function Projects(){
         
     },[id])
 
-    return(
-        <div>Projeto</div>
-    )
+    return(<>
+       {project.name ?(
+        <p>{project.name}</p>
+       ):(
+        <Loading/>
+       )}
+    </>)
 }
 
 export default Projects;
