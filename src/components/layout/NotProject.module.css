@@ -7,3 +7,17 @@
 .not_project img{
     width: 15%;
 }
+
+.teste{
+    background-color:antiquewhite;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.teste input{
+    width: 50%;
+    margin: auto;
+}

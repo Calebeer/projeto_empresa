@@ -1,6 +1,8 @@
 import styles from './NotProject.module.css'
 import img_sad from '../../img/SADNESS_Fullbody_Render.webp'
 
+
+
 function NotProject() {
     return (
       <div className={styles.not_project} >
