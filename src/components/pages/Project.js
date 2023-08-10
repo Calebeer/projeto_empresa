@@ -67,9 +67,8 @@ function Project(){
                 <LinkButton to={'/newproject'} text={'Novo projeto'} />
 
             </div>
-        {  projectMessage && <Message type={'success'} msg={projectMessage} />}
-        {messageEdit}
-        { message &&  <Message type={'success'} msg={message}/>}
+        {projectMessage && <Message type={'success'} msg={projectMessage} />}
+        {message &&  <Message type={'success'} msg={message}/>}
         <Container customClass="start">
             {projects.length > 0 &&
             projects.map((project) =>(
